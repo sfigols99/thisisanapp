@@ -8,6 +8,7 @@ import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import PropTypes from "prop-types";
 
+import ColorModeIconDropdown from "@/app/theme/ColorModeIconDropdown";
 import MenuButton from "@/components/UI/Buttons/MenuButton";
 import MenuContent from "./MenuContent";
 
@@ -32,7 +33,7 @@ function SideMenuMobile({ open, toggleDrawer }: ISideMenuMobile) {
     >
       <Stack
         sx={{
-          maxWidth: "70dvw",
+          maxWidth: "85dvw",
           height: "100%",
         }}
       >
@@ -51,9 +52,12 @@ function SideMenuMobile({ open, toggleDrawer }: ISideMenuMobile) {
               Riley Carter
             </Typography>
           </Stack>
-          <MenuButton showBadge>
-            <NotificationsRoundedIcon />
-          </MenuButton>
+          <Stack display="flex" flexDirection="row" gap={1}>
+            <ColorModeIconDropdown />
+            <MenuButton showBadge>
+              <NotificationsRoundedIcon />
+            </MenuButton>
+          </Stack>
         </Stack>
         <Divider />
         <Stack sx={{ flexGrow: 1 }}>

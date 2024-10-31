@@ -11,7 +11,6 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import Stack from "@mui/material/Stack";
-import ColorModeSelect from "../UI/ColorModeSelect/ColorModeSelect";
 
 const mainListItems = [
   { text: "Home", icon: <HomeRoundedIcon /> },
@@ -40,8 +39,6 @@ export default function MenuContent() {
         ))}
       </List>
       <List dense>
-        <ColorModeSelect sx={{ my: 2 }} />
-
         {secondaryListItems.map((item, index) => (
           <ListItem key={index} disablePadding sx={{ display: "block" }}>
             <ListItemButton>

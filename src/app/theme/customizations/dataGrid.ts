@@ -19,13 +19,16 @@ export const dataGridCustomizations: DataGridProComponents<Theme> &
       root: ({ theme }) => ({
         "--DataGrid-overlayHeight": "300px",
         overflow: "clip",
-        borderColor: (theme.vars || theme).palette.divider,
-        backgroundColor: (theme.vars || theme).palette.background.default,
+        borderColor: (theme.cssVariables || theme).palette.divider,
+        backgroundColor: (theme.cssVariables || theme).palette.background
+          .default,
         [`& .${gridClasses.columnHeader}`]: {
-          backgroundColor: (theme.vars || theme).palette.background.paper,
+          backgroundColor: (theme.cssVariables || theme).palette.background
+            .paper,
         },
         [`& .${gridClasses.footerContainer}`]: {
-          backgroundColor: (theme.vars || theme).palette.background.paper,
+          backgroundColor: (theme.cssVariables || theme).palette.background
+            .paper,
         },
         [`& .${checkboxClasses.root}`]: {
           padding: theme.spacing(0.5),
@@ -45,13 +48,13 @@ export const dataGridCustomizations: DataGridProComponents<Theme> &
         },
       }),
       cell: ({ theme }) => ({
-        borderTopColor: (theme.vars || theme).palette.divider,
+        borderTopColor: (theme.cssVariables || theme).palette.divider,
       }),
       menu: ({ theme }) => ({
         borderRadius: theme.shape.borderRadius,
         backgroundImage: "none",
         [`& .${paperClasses.root}`]: {
-          border: `1px solid ${(theme.vars || theme).palette.divider}`,
+          border: `1px solid ${(theme.cssVariables || theme).palette.divider}`,
         },
 
         [`& .${menuItemClasses.root}`]: {
@@ -68,15 +71,17 @@ export const dataGridCustomizations: DataGridProComponents<Theme> &
 
       row: ({ theme }) => ({
         "&:last-of-type": {
-          borderBottom: `1px solid ${(theme.vars || theme).palette.divider}`,
+          borderBottom: `1px solid ${
+            (theme.cssVariables || theme).palette.divider
+          }`,
         },
         "&:hover": {
-          backgroundColor: (theme.vars || theme).palette.action.hover,
+          backgroundColor: (theme.cssVariables || theme).palette.action.hover,
         },
         "&.Mui-selected": {
-          background: (theme.vars || theme).palette.action.selected,
+          background: (theme.cssVariables || theme).palette.action.selected,
           "&:hover": {
-            backgroundColor: (theme.vars || theme).palette.action.hover,
+            backgroundColor: (theme.cssVariables || theme).palette.action.hover,
           },
         },
       }),
